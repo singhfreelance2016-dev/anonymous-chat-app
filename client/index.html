@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Text Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Anonymous Text Chat</h1>
+            <p class="subtitle">Chat randomly with strangers - text only, no login required</p>
+        </header>
+
+        <main>
+            <!-- Connection Status -->
+            <div class="status-bar">
+                <div class="status-indicator" id="statusIndicator"></div>
+                <span id="statusText">Disconnected</span>
+                <span class="connection-info" id="connectionInfo"></span>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <button id="findBtn" class="btn primary">🔍 Find Random Stranger</button>
+                <button id="disconnectBtn" class="btn secondary" disabled>✖️ Disconnect</button>
+                <button id="nextBtn" class="btn secondary" disabled>⏭️ Next Partner</button>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-container">
+                <div class="chat-header" id="chatHeader">
+                    <span id="partnerName">Not connected</span>
+                </div>
+                
+                <div class="messages" id="messages">
+                    <div class="system-message">
+                        Welcome to Anonymous Text Chat! Click "Find Random Stranger" to start.
+                    </div>
+                </div>
+
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <span id="typingText"></span>
+                </div>
+
+                <div class="input-area">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Type your message here..." 
+                        disabled
+                        rows="3"
+                    ></textarea>
+                    <button id="sendBtn" class="btn primary" disabled>Send</button>
+                </div>
+            </div>
+
+            <!-- Reporting -->
+            <div class="report-section">
+                <button id="reportBtn" class="btn danger" disabled>🚩 Report User</button>
+                <small>Report inappropriate behavior</small>
+            </div>
+
+            <!-- Guidelines -->
+            <div class="guidelines">
+                <h3>Community Guidelines</h3>
+                <ul>
+                    <li>Be respectful to others</li>
+                    <li>No harassment or hate speech</li>
+                    <li>No sharing personal information</li>
+                    <li>Text chat only - no media sharing</li>
+                    <li>Report violations using the report button</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
